@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100%;
+}
+
+/*---------- Header-START---------- */
+
+/* NavBar Styles */
+.navbar {
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0%;
+  z-index: 999;
+  background-color: #f3f4f6;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo Styles */
+.navbar .logo h1 {
+  color: #424144;
+  border-bottom: 4px solid #4a20bd;
+}
+
+/* Menu Styles */
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar .menu li a {
+  display: block;
+  margin-left: 20px;
+  color: rgb(58, 56, 56);
+  border-bottom: 4px solid transparent;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar .menu li .active {
+  border-bottom: 4px solid #4a20bd;
+}
+
+.navbar .menu li a i {
+  color: #4a20bd;
+}
+
+.navbar .menu li a:hover {
+  border-bottom: 4px solid #4a20bd;
+}
+
+/*---------- Header-END---------- */
+
+/*---------- WELCOME-SECTION-START---------- */
+
+.welcome-container {
+  display: flex; /* Use flexbox for side-by-side layout */
+  flex-direction: row; /* Arrange text and image horizontally */
+  justify-content: space-between; /* Space between text and image */
+  align-items: center; /* Vertically align items */
+  height: 100vh; /* Full height */
+  padding: 0 5%;
+  background: linear-gradient(
+    to bottom,
+    #12d44d,
+    #931dca
+  ); /* Gradient background */
+  color: #000000;
+}
+
+.welcome-section {
+  flex: 1; /* Take up 50% of the container */
+  max-width: 600px; /* Optional: Limit the width of the text section */
+}
+
+.welcome-section h1 {
+  font-size: 40px;
+}
+
+.welcome-section p {
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.welcome-section button {
+  margin-top: 30px;
+  padding: 15px 30px;
+  border-color: #4a20bd;
+  background-color: mediumslateblue;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.welcome-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50px;
+}
+
+@media (max-width: 768px) {
+  .welcome-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .welcome-image {
+    margin-top: 10px;
+  }
+}
+
+.under-welcome-section {
+  text-align: center;
+  margin: 50px 0;
+  color: black;
+}
+
+/*---------- WELCOME-SECTION-END---------- */
+
+/* Grid Layout for the Item Sections */
+.item-grid {
+  display: grid; /* Enable CSS Grid */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive column layout */
+  gap: 20px; /* Space between cards */
+  padding: 20px; /* Add padding around the grid */
+  background-color: #f9f9f9; /* Light background for contrast */
+  margin-bottom: 40px; /* Space between sections */
+}
+
+/* Specific Style for the Second Section */
+.second-section {
+  background-color: #f4f4f4; /* Light gray background for the second section */
+  padding-top: 20px;
+  margin-top: 40px; /* Add some space between first and second sections */
+  border-top: 2px solid #ddd; /* Optional border between sections */
+}
+
+/* Item Card Styles */
+.item-card {
+  width: 100%; /* Ensure card takes up full width of its grid cell */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  position: relative; /* To allow badges to be placed inside the card */
+}
+
+/* Hover Effect on Item Cards */
+.item-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Item Image Style */
+.item-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Item Details */
+.item-details {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Item Name */
+.item-details h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Item Description */
+.item-description {
+  font-size: 14px;
+  color: #777;
+  margin: 10px 0;
+}
+
+/* Item Price */
+.item-price {
+  font-size: 16px;
+  color: #12d44d;
+  font-weight: bold;
+}
+
+/* Buy Now Button */
+.buy-now-button {
+  padding: 10px 20px;
+  background-color: mediumslateblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.buy-now-button:hover {
+  background-color: #4a20bd;
+}
+
+/* Badge Style (Sale, New) */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #2a2a2a;
+  color: #fff;
+  padding: 40px 5%;
+  font-family: "Arial", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 20px;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #f3f4f6;
+}
+
+.footer-section p {
+  font-size: 14px;
+  color: #ddd;
+}
+
+.social-links a {
+  margin-right: 10px;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #4a20bd; /* Change to your desired hover color */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
