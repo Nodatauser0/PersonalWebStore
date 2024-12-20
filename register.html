@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="assets/style-register.css" />
+  </head>
+  <body>
+    <form method="post" action="/submit-registration">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="first-name"
+          >First Name:
+          <input id="first-name" name="first-name" type="text" required />
+        </label>
+        <label for="last-name"
+          >Last Name:
+          <input id="last-name" name="last-name" type="text" required />
+        </label>
+        <label for="email"
+          >Email:
+          <input id="email" name="email" type="email" required />
+        </label>
+        <label for="new-password"
+          >Password:
+          <input
+            id="new-password"
+            name="new-password"
+            type="password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Password must be at least 8 characters, include a number, an uppercase and a lowercase letter."
+            required
+          />
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Additional Information</legend>
+        <label for="profile-picture"
+          >Profile Picture:
+          <input id="profile-picture" type="file" name="file" />
+        </label>
+        <label for="age"
+          >Age:
+          <input id="age" type="number" name="age" min="13" max="120" />
+        </label>
+        <label for="referrer"
+          >How did you hear about us?
+          <select id="referrer" name="referrer" required>
+            <option value="">(select one)</option>
+            <option value="1">Tik Tok</option>
+            <option value="2">YouTube</option>
+            <option value="3">Google</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+        <label for="bio"
+          >Bio:
+          <textarea
+            id="bio"
+            name="bio"
+            rows="3"
+            cols="30"
+            placeholder="I like coding on the beach..."
+            maxlength="200"
+          ></textarea>
+        </label>
+      </fieldset>
+      <label for="terms-and-conditions">
+        <input
+          class="inline"
+          id="terms-and-conditions"
+          type="checkbox"
+          required
+          name="terms-and-conditions"
+        />
+        I accept the
+        <a href="/terms-and-conditions" target="_blank">terms and conditions</a
+        >.
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Play Station - Product Page</title>
+    <link rel="stylesheet" href="assets/PlayStation.css" />
+    <script src="assets/script.js" defer></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="logo"><h1>GkStore</h1></div>
+      <ul class="menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#">Contact Owner</a></li>
+        <li><a href="#">About Us</a></li>
+        <li>
+          <a href="#"><i class="fas fa-shopping-cart"></i></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Product Details Section -->
+    <div class="product-container">
+      <div class="product-image">
+        <img
+          width="800"
+          src="/Pictures/PlayStation-picture.jpg"
+          alt="Play Station"
+        />
+      </div>
+      <div class="product-details">
+        <h2>Play Station</h2>
+        <p class="product-price">$100</p>
+        <p class="product-description">
+          The Play Station is a cutting-edge gaming console that offers
+          unparalleled gaming experiences. Enjoy stunning graphics, immersive
+          gameplay, and access to thousands of games.
+        </p>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1" />
+        <button class="buy-now-button">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Related Products Section -->
+    <div class="related-products">
+      <h3>You May Also Like</h3>
+      <div class="item-grid">
+        <!-- Add related items here -->
+        <div class="item-card">
+          <img src="/Pictures/no-product.png" alt="Item 2" class="item-image" />
+          <div class="item-details">
+            <h3>Item Name 2</h3>
+            <p class="item-description">
+              A short description of the second item.
+            </p>
+            <p class="item-price">$39.99</p>
+            <button class="buy-now-button">Buy Now</button>
+          </div>
+        </div>
+        <div class="item-card">
+          <img src="/Pictures/no-product.png" alt="Item 2" class="item-image" />
+          <div class="item-details">
+            <h3>Item Name 2</h3>
+            <p class="item-description">
+              A short description of the second item.
+            </p>
+            <p class="item-price">$39.99</p>
+            <button class="buy-now-button">Buy Now</button>
+          </div>
+        </div>
+        <div class="item-card">
+          <img src="/Pictures/no-product.png" alt="Item 2" class="item-image" />
+          <div class="item-details">
+            <h3>Item Name 2</h3>
+            <p class="item-description">
+              A short description of the second item.
+            </p>
+            <p class="item-price">$39.99</p>
+            <button class="buy-now-button">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2024 GkStore. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
